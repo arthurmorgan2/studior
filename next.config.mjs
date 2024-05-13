@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     static: true,
-    output: 'public',
+    path: 'public',
+    output: 'export',
 };
 
 export default nextConfig;
