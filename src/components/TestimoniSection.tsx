@@ -73,10 +73,10 @@ const TestimoniSection = () => {
           </div>
           <div className="embla__slide flex flex-col justify-between gap-4">
             <p className="md:text-lg text-xs font-semibold">
-              {"''"} I'm blown away by Studior's transformation of my space!
-              Their attention to detail, creativity, and understanding of my
-              needs made the process seamless. I'm thrilled with the result - my
-              home feels like a new world! {"''"}
+              {"''"} I{"'"}m blown away by Studior{"'"}s transformation of my
+              space! Their attention to detail, creativity, and understanding of
+              my needs made the process seamless. I{"'"}m thrilled with the
+              result - my home feels like a new world! {"''"}
             </p>
             <div className="flex items-center gap-4">
               <Avatar>

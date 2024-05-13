@@ -57,7 +57,7 @@ const Banner = () => {
                 <Button
                   variant="ghost"
                   className="font-bold tracking-widest bg-[#124980] mt-8 px-6 py-3">
-                  Let's Dive In!
+                  Let{"'"}s Dive In!
                 </Button>
               </Link>
             </div>
