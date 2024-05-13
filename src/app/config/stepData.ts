@@ -64,7 +64,7 @@ export const STEP_ITEM = [
     id: 7,
     label: "Pelayanan Purna Jual",
     description:
-      "Jaminan pemeliharaan sesuai dengan garansi paket yang dipilih",
+      "Jaminan pemeliharaan sesuai dengan garansi paket yang dipilih!",
     icon: "/assets/icon/proses.png",
     iconWidth: 70,
     iconHeight: 70,
