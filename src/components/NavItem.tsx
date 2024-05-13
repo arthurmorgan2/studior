@@ -36,13 +36,13 @@ const NavItem = ({
     <div className="flex">
       <div className="relative flex items-center group">
         <Button
-          className="gap-1.5"
+          className="gap-1.5 font-bold tracking-widest"
           onClick={handleOpen}
           variant={isOpen ? "secondary" : "ghost"}>
           {navItem.label}
           <ChevronDown
             className={cn(
-              "h-4 w-4 transition-all text-muted-foreground text-white group-hover:text-gray-500",
+              "md:h-4 h-6 md:w-4 w-6 transition-all text-muted-foreground text-white group-hover:text-gray-500",
               {
                 "-rotate-180 text-gray-500": isOpen,
               }
@@ -74,7 +74,7 @@ const NavItem = ({
                     <div
                       onClick={() => close}
                       key={item.name}
-                      className="group relative text-base sm:text-sm">
+                      className="group relative text-sm md:text-lg">
                       <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 shadow-lg">
                         <Image
                           src={item.imageSrc}
@@ -98,7 +98,7 @@ const NavItem = ({
                 </div>
               </div>
               <div
-                className={`${hiddenButton} items-center justify-center py-4`}>
+                className={`${hiddenButton} items-center justify-center md:py-4 py-0`}>
                 <Button
                   className="text-lg hover:text-underlined hover:cursor-pointer text-gray-900"
                   variant="ghost">
