@@ -8,6 +8,11 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 interface CardProps {
   label: string;
@@ -25,30 +30,56 @@ const Card: React.FC<CardProps> = ({
   iconHeight,
 }) => {
   return (
-    <HoverCard openDelay={0} closeDelay={1}>
-      <motion.div whileHover={{ y: -5 }} className="flex pt-4">
-        <HoverCardTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 gap-2">
-          <motion.div
-            whileHover={{ y: -5 }} // Move 5 pixels upward on hover
-            className="flex justify-center items-center">
-            <Image
-              src={icon}
-              alt={label}
-              height={iconWidth}
-              width={iconHeight}
-            />
-          </motion.div>
-          <div className="flex items-center lg:justify-start justify-center">
-            <div className="font-bold lg:text-left text-center tracking-wider lg:text-sm text-xs italic">
-              {label}
+    <>
+      <HoverCard openDelay={0} closeDelay={1}>
+        <motion.div whileHover={{ y: -5 }} className="hidden lg:flex pt-4">
+          <HoverCardTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 gap-2">
+            <motion.div
+              whileHover={{ y: -5 }} // Move 5 pixels upward on hover
+              className="flex justify-center items-center">
+              <Image
+                src={icon}
+                alt={label}
+                height={iconWidth}
+                width={iconHeight}
+              />
+            </motion.div>
+            <div className="flex items-center lg:justify-start justify-center">
+              <div className="font-bold lg:text-left text-center tracking-wider lg:text-sm text-xs italic">
+                {label}
+              </div>
             </div>
-          </div>
-        </HoverCardTrigger>
-        <HoverCardContent className="flex items-center justify-center font-semibold text-xs text-center">
-          {description}
-        </HoverCardContent>
-      </motion.div>
-    </HoverCard>
+          </HoverCardTrigger>
+          <HoverCardContent className="flex items-center justify-center font-semibold text-xs text-center">
+            {description}
+          </HoverCardContent>
+        </motion.div>
+      </HoverCard>
+      <Popover>
+        <motion.div whileHover={{ y: -5 }} className="lg:hidden flex pt-4">
+          <PopoverTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 gap-2">
+            <motion.div
+              whileHover={{ y: -5 }} // Move 5 pixels upward on hover
+              className="flex justify-center items-center">
+              <Image
+                src={icon}
+                alt={label}
+                height={iconWidth}
+                width={iconHeight}
+              />
+            </motion.div>
+            <div className="flex items-center lg:justify-start justify-center">
+              <div className="font-bold lg:text-left text-center tracking-wider lg:text-sm text-xs italic">
+                {label}
+              </div>
+            </div>
+          </PopoverTrigger>
+          <PopoverContent className="flex items-center justify-center font-semibold text-xs text-center">
+            {description}
+          </PopoverContent>
+        </motion.div>
+      </Popover>
+    </>
   );
 };
 
