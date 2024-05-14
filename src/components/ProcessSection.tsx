@@ -16,6 +16,7 @@ const ProcessSection = () => {
       setSelectedIndex(index);
     }
   };
+
   return (
     <div className="mx-auto w-full max-w-screen-xl md:px-20">
       <div className="grid lg:grid-cols-2">
@@ -29,7 +30,7 @@ const ProcessSection = () => {
             a seamless journey from initial inspiration to the realization of
             your dream space. Here{"'"}s how we make it happen:
           </p>
-          <div className="relative grid lg:grid-cols-3 grid-cols-3 md:gap-4 gap-0 text-center">
+          <div className="relative grid grid-cols-3 md:gap-4 gap-4 text-center">
             {STEP_ITEM.map((item, index) => (
               <StepCard
                 key={index}
@@ -44,17 +45,17 @@ const ProcessSection = () => {
                 onClick={() => scrollToIndex(index)}
               />
             ))}
-            <div className="lg:block hidden absolute top-[4.3rem] w-full h-[320px] place-items-center ">
+            <div className="absolute md:top-[4.3rem] sm:top-[3.2rem] top-[2.6rem] w-full">
               <div className="flex justify-center">
-                <div className="w-[340px] h-40 border-y-2 border-r-2 border-[#FDD371]"></div>
+                <div className="lg:w-[340px] md:w-[480px] sm:w-[470px] w-[210px] md:h-40 sm:h-32 h-28 border-y-2 border-r-2 border-[#FDD371]"></div>
               </div>
               <div className="flex justify-center">
-                <div className="w-[340px] h-40 border-l-2 border-[#FDD371]"></div>
+                <div className="lg:w-[340px] md:w-[480px] sm:w-[470px] w-[210px] md:h-40 sm:h-32 h-24 border-l-2 border-[#FDD371]"></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="lg:flex items-center justify-center w-full hidden">
+        <div className="lg:flex items-center justify-center w-full">
           <div className="embla relative">
             <div className="embla__viewport" ref={viewportRef}>
               <div className="embla__container">

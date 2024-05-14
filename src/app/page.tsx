@@ -90,19 +90,22 @@ export default function Home() {
       </section>
       <section className="w-full flex bg-slate-100">
         <MaxWidthWrapper>
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 lg:py-12 py-4 lg:gap-0 gap-4">
+          <div className="grid lg:grid-cols-4 sm:grid-cols-2 lg:py-12 py-4 lg:gap-0 gap-4">
             <div className="flex items-center justify-start">
               <h1 className="text-4xl font-bold tracking-wide">
                 All Project <br /> that we have{" "}
                 <span className="text-[#124980]">Done</span>
               </h1>
             </div>
-            <div className="flex lg:col-end-4 items-center">
+            <div className="flex lg:col-end-5 col-span-2 items-center">
               <p className="md:text-lg text-xs font-semibold">
-                {"''"}Discover our portfolio, showcasing our finest projects
-                with meticulous attention to detail. From sleek modern designs
-                to cozy classics, find inspiration for every space. Immerse
-                yourself and let the beauty of interiors captivate your senses
+                {"''"}Berawal dari satu project yang kemudian berlanjut hingga
+                saat ini berkat kepercayaan klien-klien kami & kerja keras tim
+                kami yang selalu mengusahakan hasil yang terbaik dalam setiap
+                project yang kami laksanakan. <br /> Berikut hasil kerja keras
+                tim kami sejak tahun 2015-2022 yang tidak semuanya dapat kami
+                tampilkan tapi kami harap dapat menjadi inspirasi untuk interior
+                impian anda.
                 {"''"}
               </p>
             </div>
