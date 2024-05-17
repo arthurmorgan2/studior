@@ -3,40 +3,12 @@ import Cards from "@/components/Cards";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import StepCard from "@/components/StepCard";
-import StepCarousel from "@/components/StepCarousel";
 import { CARD_ITEM } from "./config/cardData";
-import { STEP_ITEM } from "./config/stepData";
 import { PORTO_ITEM } from "./config/portoData";
 import PortoCard from "@/components/PortoCard";
-import { Button } from "@/components/ui/button";
 import TestimoniSection from "@/components/TestimoniSection";
 import ProcessSection from "@/components/ProcessSection";
-
-// interface CardItem {
-//   label: string;
-//   description: string;
-//   icon: string;
-//   iconWidth: number;
-//   iconHeight: number;
-// }
-// interface StepItem {
-//   id: number;
-//   label: string;
-//   description: string;
-//   icon: string;
-//   iconWidth: number;
-//   iconHeight: number;
-// }
-// interface PortoItem {
-//   id: number;
-//   name: string;
-//   categories: string;
-//   year: string;
-//   description: string;
-//   image: string;
-//   alt: string;
-// }
+type PortoItem = (typeof PORTO_ITEM)[number];
 
 export default function Home() {
   return (
@@ -115,17 +87,20 @@ export default function Home() {
       <section className="w-full flex">
         <MaxWidthWrapper>
           <div className="flex flex-col md:gap-8 gap-4">
-            {PORTO_ITEM.map((item, index) => (
+            {PORTO_ITEM.map((porto: PortoItem, index) => (
               <PortoCard
-                key={index}
-                id={item.id}
-                name={item.name}
-                categories={item.categories}
-                year={item.year}
-                description={item.description}
-                image={item.image}
-                alt={item.alt}
+                key={porto.id}
+                name={porto.name}
+                address={porto.address}
+                categories={porto.categories}
+                year={porto.year}
+                description={porto.description}
+                images={porto.image}
+                alt={porto.alt}
+                id={0}
                 isReversedLayout={index === 1}
+                url={porto.url}
+                slug={porto.slug}
               />
             ))}
           </div>
