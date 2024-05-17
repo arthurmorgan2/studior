@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -65,7 +66,7 @@ const StepCard: React.FC<StepProps> = ({
         </motion.button>
       </HoverCard>
       <Popover>
-        <motion.button
+        <motion.div
           onClick={onClick}
           whileHover={{ y: -5 }}
           className="relative z-10 lg:hidden flex items-center justify-center w-full md:p-8 p-4">
@@ -88,7 +89,7 @@ const StepCard: React.FC<StepProps> = ({
           <PopoverContent className="flex items-center justify-center font-semibold text-xs text-center w-40">
             {label}
           </PopoverContent>
-        </motion.button>
+        </motion.div>
       </Popover>
     </>
   );

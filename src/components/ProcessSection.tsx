@@ -17,6 +17,13 @@ const ProcessSection = () => {
     }
   };
 
+  // Splitting the STEP_ITEM array into two rows
+  const firstRow = STEP_ITEM.slice(0, 3);
+  const secondRow = STEP_ITEM.slice(3);
+
+  // Reversing the order of the second row
+  const reversedSecondRow = secondRow.slice().reverse();
+
   return (
     <div className="mx-auto w-full max-w-screen-xl md:px-20">
       <div className="grid lg:grid-cols-2">

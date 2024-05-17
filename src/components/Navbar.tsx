@@ -47,7 +47,10 @@ const Navbar = () => {
         hasBackground || isMenuOpen ? "bg-[#124980]" : "" // Apply background color conditionally
       }`}
       style={{
-        transition: "background-color 0.5s ease", // Smooth transition for background color change
+        backgroundColor: hasBackground
+          ? "rgba(18, 73, 128, 0.5)"
+          : "rgba(75, 85, 99, 0.5)", // Set rgba with opacity
+        transition: "background-color 0.5s ease",
       }}>
       <header className="relative">
         <MaxWidthWrapper>

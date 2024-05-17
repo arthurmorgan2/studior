@@ -2,9 +2,6 @@
 
 import React, { useState, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
-import { STEP_ITEM } from "@/app/config/stepData";
-import StepButton from "./StepButton";
 
 interface StepItem {
   id: number;
@@ -26,9 +23,7 @@ const StepCarousel = () => {
     }
   };
 
-  return (
-   <div></div>
-  );
+  return <div></div>;
 };
 
 export default StepCarousel;
