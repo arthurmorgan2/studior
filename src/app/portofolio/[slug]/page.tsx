@@ -1,24 +1,33 @@
+// app/portfolio/[slug]/page.js
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import Badges from "@/components/uttara/Badges";
 import Collage from "@/components/uttara/Collage";
-import Banner from "@/components/Banner";
 import Carousel from "@/components/Carousel";
 import { PORTO_ITEM } from "@/app/config/portoData";
 
 interface PortoProps {
-  slug: string;
+  params: {
+    slug: string;
+  };
 }
 
-const page = ({ params }: { params: PortoProps }) => {
-  const { slug } = params;
+export async function generateStaticParams() {
+  return PORTO_ITEM.map((item) => ({
+    slug: item.slug,
+  }));
+}
 
+const Page = ({ params }: PortoProps) => {
+  const { slug } = params;
   const portoData = PORTO_ITEM.find((item) => item.slug === slug);
 
   if (!portoData) {
     return <div>Item not found</div>;
   }
+
   return (
     <>
       <Carousel images={portoData.image} />
@@ -44,4 +53,4 @@ const page = ({ params }: { params: PortoProps }) => {
   );
 };
 
-export default page;
+export default Page;
