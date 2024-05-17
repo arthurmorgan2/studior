@@ -4,12 +4,16 @@ import Image from "next/image";
 
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
   return (
-    <div className="relative w-full">
-      <div className="flex overflow-x-auto max-h-[550px]">
+    <div className="flex justify-center relative">
+      <div className="flex overflow-x-auto max-h-[570px]">
         {images.map((image, index) => (
-          <div key={index}>
-            <Image src={image.src} alt="image" width={900} height={600} />
-          </div>
+          <Image
+            key={index}
+            src={image.src}
+            alt="image"
+            width={900}
+            height={600}
+          />
         ))}
       </div>
     </div>
