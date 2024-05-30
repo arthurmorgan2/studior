@@ -32,11 +32,11 @@ const Card: React.FC<CardProps> = ({
   return (
     <>
       <HoverCard openDelay={0} closeDelay={1}>
-        <motion.div whileHover={{ y: -5 }} className="hidden lg:flex pt-4">
-          <HoverCardTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 gap-2">
+        <motion.div whileHover={{ y: -5 }} className="hidden lg:flex">
+          <HoverCardTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 border">
             <motion.div
               whileHover={{ y: -5 }} // Move 5 pixels upward on hover
-              className="flex justify-center items-center">
+              className="flex items-center justify-center">
               <Image
                 src={icon}
                 alt={label}
@@ -56,8 +56,8 @@ const Card: React.FC<CardProps> = ({
         </motion.div>
       </HoverCard>
       <Popover>
-        <motion.div whileHover={{ y: -5 }} className="lg:hidden flex pt-4">
-          <PopoverTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 gap-2">
+        <motion.div whileHover={{ y: -5 }} className="lg:hidden flex">
+          <PopoverTrigger className="flex flex-col gap-2 items-center justify-center rounded-lg shadow-lg w-full py-3 border">
             <motion.div
               whileHover={{ y: -5 }} // Move 5 pixels upward on hover
               className="flex justify-center items-center">
@@ -68,8 +68,8 @@ const Card: React.FC<CardProps> = ({
                 width={iconHeight}
               />
             </motion.div>
-            <div className="flex items-center lg:justify-start justify-center">
-              <div className="font-bold lg:text-left text-center tracking-wider lg:text-sm text-xs italic">
+            <div className="flex items-center justify-center lg:justify-start h-full">
+              <div className="font-bold text-center tracking-wider lg:text-sm text-xs italic">
                 {label}
               </div>
             </div>

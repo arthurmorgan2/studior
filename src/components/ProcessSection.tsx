@@ -17,79 +17,52 @@ const ProcessSection = () => {
     }
   };
 
-  // Splitting the STEP_ITEM array into two rows
-  const firstRow = STEP_ITEM.slice(0, 3);
-  const secondRow = STEP_ITEM.slice(3);
-
-  // Reversing the order of the second row
-  const reversedSecondRow = secondRow.slice().reverse();
-
   return (
     <div className="mx-auto w-full max-w-screen-xl md:px-20">
-      <div className="grid lg:grid-cols-2">
-        <div className="flex flex-col justify-start w-full gap-4 md:gap-8 md:px-8 px-2.5 py-6 text-white bg-[#124980]">
-          <h1 className="md:text-6xl text-4xl font-bold text-start">
-            OUR PROCESS
-          </h1>
-          <p className="md:text-lg text-xs leading-relaxed">
-            At Studior, we understand that every space tells a story, and we
-            {"'"}re here to help you craft yours. Our interior design process is
-            a seamless journey from initial inspiration to the realization of
-            your dream space. Here{"'"}s how we make it happen:
-          </p>
-          <div className="relative grid grid-cols-3 md:gap-4 gap-4 text-center">
-            {STEP_ITEM.map((item, index) => (
-              <StepCard
-                key={index}
-                index={index}
-                id={item.id}
-                label={item.label}
-                description={item.description}
-                icon={item.icon}
-                iconWidth={item.iconWidth}
-                iconHeight={item.iconHeight}
-                isSelected={index === selectedIndex}
-                onClick={() => scrollToIndex(index)}
-              />
-            ))}
-            <div className="absolute md:top-[4.3rem] sm:top-[3.2rem] top-[2.6rem] w-full">
-              <div className="flex justify-center">
-                <div className="lg:w-[340px] md:w-[480px] sm:w-[470px] w-[210px] md:h-40 sm:h-32 h-28 border-y-2 border-r-2 border-[#FDD371]"></div>
-              </div>
-              <div className="flex justify-center">
-                <div className="lg:w-[340px] md:w-[480px] sm:w-[470px] w-[210px] md:h-40 sm:h-32 h-24 border-l-2 border-[#FDD371]"></div>
-              </div>
-            </div>
-          </div>
+      <div className="flex flex-col justify-start w-full text-gray-700 md:gap-8 gap-4 pt-8">
+        <h1 className="md:text-4xl text-xl font-bold text-center">
+          6 Langkah Menuju Interior Impianmu
+        </h1>
+        <div className="relative grid grid-cols-6 text-center">
+          {STEP_ITEM.map((item, index) => (
+            <StepCard
+              key={index}
+              index={index}
+              id={item.id}
+              label={item.label}
+              description={item.description}
+              icon={item.icon}
+              iconWidth={item.iconWidth}
+              iconHeight={item.iconHeight}
+              isSelected={index === selectedIndex}
+              onClick={() => scrollToIndex(index)}
+            />
+          ))}
+          <div className="absolute md:top-9 top-3.5 lg:left-14 sm:left-12 left-9 lg:w-[90%] w-[85%] border-t-2 "></div>
         </div>
-        <div className="lg:flex items-center justify-center w-full">
-          <div className="embla relative">
-            <div className="embla__viewport" ref={viewportRef}>
-              <div className="embla__container">
-                {STEP_ITEM.map((item, index) => (
-                  <div
-                    key={index}
-                    className="embla__slide flex items-center justify-center">
+      </div>
+      <div className="lg:flex items-center justify-center w-full pt-4">
+        <div className="embla relative">
+          <div className="embla__viewport" ref={viewportRef}>
+            <div className="embla__container">
+              {STEP_ITEM.map((item, index) => (
+                <div key={index} className="embla__slide">
+                  <div className="flex flex-col items-center justify-evenly h-full pb-4">
                     <Image
                       src={item.src}
                       alt={item.alt}
-                      width={500}
-                      height={500}
+                      width={400}
+                      height={400}
                     />
+                    <div className="flex md:w-[60%] w-4/5 justify-center items-center text-center border p-4 mt-4 rounded-lg shadow-xl">
+                      <p className="md:text-lg text-sm text-gray-700">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-            {/* <div className="stepper flex">
-              {STEP_ITEM.map((_, index) => (
-                <StepButton
-                  key={index}
-                  index={index}
-                  isSelected={index === selectedIndex}
-                  onClick={() => scrollToIndex(index)}
-                />
+                </div>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

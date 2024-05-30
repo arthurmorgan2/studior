@@ -43,7 +43,7 @@ const StepCard: React.FC<StepProps> = ({
         <motion.button
           onClick={onClick}
           whileHover={{ y: -5 }}
-          className="relative z-10 lg:flex hidden items-center justify-center w-full md:p-8 p-4">
+          className="relative z-10 md:flex hidden items-center justify-center w-full">
           <HoverCardTrigger className="rounded-lg text-center">
             <div
               className={`relative ${
@@ -52,8 +52,8 @@ const StepCard: React.FC<StepProps> = ({
               <Image
                 src={icon}
                 alt={label}
-                height={iconWidth}
-                width={iconHeight}
+                height={70}
+                width={70}
               />
               <div className="absolute flex items-center top-0 left-[-10px] z-10 h-8 w-8 rounded-full bg-[#FDD371]">
                 <div className="w-full font-bold">{id}</div>
@@ -69,21 +69,13 @@ const StepCard: React.FC<StepProps> = ({
         <motion.div
           onClick={onClick}
           whileHover={{ y: -5 }}
-          className="relative z-10 lg:hidden flex items-center justify-center w-full md:p-8 p-4">
+          className="relative z-10 md:hidden flex items-center justify-center w-full">
           <PopoverTrigger className="rounded-lg text-center">
             <div
-              className={`relative ${
-                isSelected ? "bg-[#FDD377]" : "bg-white"
-              } rounded-full p-1`}>
-              <Image
-                src={icon}
-                alt={label}
-                height={iconWidth}
-                width={iconHeight}
-              />
-              <div className="absolute flex items-center top-0 left-[-10px] z-10 h-8 w-8 rounded-full bg-[#FDD371]">
-                <div className="w-full font-bold">{id}</div>
-              </div>
+              className={`flex items-center h-8 w-8 rounded-full border-2 border-white ${
+                isSelected ? "bg-[#FDD371]" : "bg-[#124980]"
+              }`}>
+              <div className="w-full font-bold text-sm md:text-gray-700 text-white">{id}</div>
             </div>
           </PopoverTrigger>
           <PopoverContent className="flex items-center justify-center font-semibold text-xs text-center w-40">

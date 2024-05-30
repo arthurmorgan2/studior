@@ -48,7 +48,7 @@ const Navbar = () => {
       }`}
       style={{
         backgroundColor: hasBackground
-          ? "rgba(18, 73, 128, 0.5)"
+          ? "rgba(18, 73, 128, 1)"
           : "rgba(75, 85, 99, 0.5)", // Set rgba with opacity
         transition: "background-color 0.5s ease",
       }}>
@@ -76,7 +76,9 @@ const Navbar = () => {
                   </Link>
                 </Button>
                 <Button variant="ghost">
-                  <Link href="/" className="font-bold tracking-widest">
+                  <Link
+                    href="/contact-us"
+                    className="font-bold tracking-widest">
                     Contact Us
                   </Link>
                 </Button>
