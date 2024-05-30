@@ -65,11 +65,12 @@ const Navbar = () => {
                 />
               </Link>
             </div>
-            <div className="hidden lg:flex z-50">
-              <NavItems />
-            </div>
+
             <div className="flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-4 text-base sm:text-sm">
+                <div className="hidden lg:flex z-50">
+                  <NavItems />
+                </div>
                 <Button variant="ghost">
                   <Link href="/" className="font-bold tracking-widest">
                     About

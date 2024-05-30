@@ -86,7 +86,8 @@ const NavItem = ({
 
                       <Link
                         href={item.href}
-                        className="mt-6 block font-medium text-gray-900">
+                        className="mt-6 block font-medium text-gray-900"
+                        target="_blank">
                         {item.name}
                       </Link>
                       <p className="mt-1" aria-hidden="true">

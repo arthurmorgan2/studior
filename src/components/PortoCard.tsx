@@ -46,7 +46,7 @@ const PortoCard: React.FC<PortoProps> = ({
         className={`w-full flex items-center lg:col-span-3 md:col-span-2 col-span-0 relative ${
           isReversedLayout ? "md:order-last" : ""
         }`}>
-        <div className="w-full h-[200px]">
+        <div className="w-full h-[350px]">
           <Image
             src={images[2].src}
             alt={alt}
@@ -57,10 +57,10 @@ const PortoCard: React.FC<PortoProps> = ({
       </div>
       <div className="flex flex-col justify-center md:gap-4 gap-2 lg:py-12 md:py-8">
         <h1 className="md:text-4xl text-2xl font-bold tracking-wide text-gray-700">{name}</h1>
-        <p className="md:text-base text-xs text-muted-foreground  ">
+        {/* <p className="md:text-base text-xs text-muted-foreground  ">
           {description}
-        </p>
-        <div className="flex lg:pt-16 pt-0">
+        </p> */}
+        <div className="flex pt-0">
           <Link href={`/portofolio/${slug}`}>
             <Button
               variant="link"
