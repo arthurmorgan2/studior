@@ -7,7 +7,7 @@ export const STEP_ITEM = [
     icon: "/assets/icon/freecon.png",
     iconWidth: 70,
     iconHeight: 70,
-    src: "/assets/images/step/freeconsul.png",
+    src: "/assets/images/step/freeconsul.svg",
     alt: "Image 1",
   },
   {
@@ -17,7 +17,7 @@ export const STEP_ITEM = [
     icon: "/assets/icon/surveylok.png",
     iconWidth: 70,
     iconHeight: 70,
-    src: "/assets/images/step/surveyloc.png",
+    src: "/assets/images/step/surveyloc.svg",
     alt: "Image 2",
   },
   {
@@ -28,7 +28,7 @@ export const STEP_ITEM = [
     icon: "/assets/icon/proposal.png",
     iconWidth: 70,
     iconHeight: 70,
-    src: "/assets/images/step/design.png",
+    src: "/assets/images/step/design.svg",
     alt: "Image 4",
   },
   // {
@@ -49,7 +49,7 @@ export const STEP_ITEM = [
     icon: "/assets/icon/perjanjian.png",
     iconWidth: 70,
     iconHeight: 70,
-    src: "/assets/images/step/production.png",
+    src: "/assets/images/step/production.svg",
     alt: "Image 6",
   },
   {
@@ -60,7 +60,7 @@ export const STEP_ITEM = [
     icon: "/assets/icon/pelaksanaan.png",
     iconWidth: 70,
     iconHeight: 70,
-    src: "/assets/images/step/instalation.png",
+    src: "/assets/images/step/instalation.svg",
     alt: "Image 5",
   },
   {
@@ -71,7 +71,7 @@ export const STEP_ITEM = [
     icon: "/assets/icon/purna.png",
     iconWidth: 70,
     iconHeight: 70,
-    src: "/assets/images/step/aftersales.png",
+    src: "/assets/images/step/aftersales.svg",
     alt: "Image 8",
   },
 ];

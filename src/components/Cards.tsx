@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <>
       <HoverCard openDelay={0} closeDelay={1}>
-        <motion.div whileHover={{ y: -5 }} className="hidden lg:flex">
+        <motion.div whileHover={{ y: -5 }} className="hidden lg:flex w-72 justify-center">
           <HoverCardTrigger className="grid lg:grid-cols-2 rounded-lg shadow-lg text-center w-full py-3 border">
             <motion.div
               whileHover={{ y: -5 }} // Move 5 pixels upward on hover

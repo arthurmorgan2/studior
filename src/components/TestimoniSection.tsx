@@ -52,19 +52,63 @@ const TestimoniSection = () => {
         <div className="embla__container">
           <div className="embla__slide flex flex-col justify-between gap-4 text-gray-700">
             <p className="md:text-lg text-xs font-semibold">
-              {"''"} I was absolutely blown away by the transformation Studior
-              brought to my space! Their attention to detail, creative vision,
-              and dedication to understanding my needs made the entire process a
-              breeze. I couldn{"'"}t be happier with the result. My home feels
-              like a whole new world, thanks to their incredible talent! {"''"}
+              {"''"}Puas dengan hasilnya, rapi dan detail. Semua request kami
+              bisa diaplikasikan dengan baik. Opsi2 bahan juga lengkap dan bisa
+              dicarikan sesuai request. Thanks Studior.{"''"}
             </p>
             <div className="flex items-center gap-4">
               <Avatar>
-                <AvatarImage src="/assets/avatar/avatar-1.png" />
-                <AvatarFallback>Nura</AvatarFallback>
+                <AvatarImage src="/assets/avatar/avatar-2.png" />
+                <AvatarFallback>Dayan Ramly Ramadhan</AvatarFallback>
               </Avatar>
               <div className="flex flex-col justify-center">
-                <h1 className="lg:text-base text-xs font-semibold">Nura Jo</h1>
+                <h1 className="lg:text-base text-xs font-semibold">
+                  Dayan Ramly Ramadhan
+                </h1>
+                <p className="text-muted-foreground lg:text-base text-xs">
+                  Yogyakarta
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="embla__slide flex flex-col justify-between gap-4 text-gray-700">
+            <p className="md:text-lg text-xs font-semibold">
+              {"''"}Hasilnya mantep bagus bgt, pengerjaan juga tepat waktu, next
+              kalo ada rumah/toko lagi mau bikin interior nya disini lagi aja.
+              {"''"}
+            </p>
+            <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarImage src="/assets/avatar/avatar-3.png" />
+                <AvatarFallback>Safirra Wigati</AvatarFallback>
+              </Avatar>
+              <div className="flex flex-col justify-center">
+                <h1 className="lg:text-base text-xs font-semibold">
+                  Safirra Wigati
+                </h1>
+                <p className="text-muted-foreground lg:text-base text-xs">
+                  Yogyakarta
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="embla__slide flex flex-col justify-between gap-4 text-gray-700">
+            <p className="md:text-lg text-xs font-semibold">
+              {"''"}Menggunakan jasa studior utk membuat kitchen set adalah
+              pilihan tepat bagi sy. Teamnya sangat komunikatif dan helpfull
+              sekali. Pengerjaannya juga rapi. Pelayanannya juga baik. Sukses
+              selalu utk studior dan team..
+              {"''"}
+            </p>
+            <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarImage src="/assets/avatar/avatar-4.png" />
+                <AvatarFallback>Ratna Setyaningsih</AvatarFallback>
+              </Avatar>
+              <div className="flex flex-col justify-center">
+                <h1 className="lg:text-base text-xs font-semibold">
+                  Ratna Setyaningsih
+                </h1>
                 <p className="text-muted-foreground lg:text-base text-xs">
                   Yogyakarta
                 </p>

@@ -38,6 +38,10 @@ const Navbar = () => {
     controls.start(visible ? { y: 0 } : { y: -100 });
   }, [visible, controls]);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <motion.div
       initial={{ y: 0 }}
@@ -72,15 +76,15 @@ const Navbar = () => {
                   <NavItems />
                 </div>
                 <Button variant="ghost">
-                  <Link href="/" className="font-bold tracking-widest">
-                    About
+                  <Link href="/about-us" className="font-bold tracking-widest">
+                    Tentang Kami
                   </Link>
                 </Button>
                 <Button variant="ghost">
                   <Link
                     href="/contact-us"
                     className="font-bold tracking-widest">
-                    Contact Us
+                    Kontak
                   </Link>
                 </Button>
               </div>
@@ -114,26 +118,37 @@ const Navbar = () => {
       </header>
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-16 inset-x-0 bg-[#124980] py-4 flex justify-center h-screen overflow-y-hidden">
-          <div className="flex flex-col justify-center items-center lg:justify-start lg:items-stretch md:mx-0 mx-4 gap-16">
+        <div className="lg:hidden absolute top-16 inset-x-0 bg-gray-500 bg-opacity-70 py-4 flex justify-center h-dvh overflow-y-hidden">
+          <div className="flex flex-col justify-center items-center lg:justify-start lg:items-stretch md:mx-0 mx-4 gap-12 text-white">
             <div className="md:px-4 px-0 py-2">
-              <Button variant="ghost">
-                <Link href="/" className="text-3xl lg:text-sm">
+              <Link href="/">
+                <Button
+                  variant="ghost"
+                  className="text-3xl lg:text-sm px-6 py-10 rounded-xl bg-[#124980]"
+                  onClick={handleLinkClick}>
                   Portofolio
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
             <div className="md:px-4 px-0 py-2">
-              <Button variant="ghost">
-                <Link href="/" className="text-3xl lg:text-sm">
-                  About
-                </Link>
-              </Button>
+              <Link href="/about">
+                <Button
+                  variant="ghost"
+                  className="text-3xl lg:text-sm px-6 py-10 rounded-xl bg-[#124980]"
+                  onClick={handleLinkClick}>
+                  Tentang Kami
+                </Button>
+              </Link>
             </div>
             <div className="md:px-4 px-0 py-2">
-              <Button variant="ghost" className="text-3xl lg:text-sm">
-                <Link href="/">Contact Us</Link>
-              </Button>
+              <Link href="/contact-us">
+                <Button
+                  variant="ghost"
+                  className="text-3xl lg:text-sm px-6 py-10 rounded-xl bg-[#124980]"
+                  onClick={handleLinkClick}>
+                  Kontak
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

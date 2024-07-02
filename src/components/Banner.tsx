@@ -5,6 +5,12 @@ import Link from "next/link";
 import Background from "./Background";
 
 const Banner = () => {
+  const scrollToSection = () => {
+    const section = document.getElementById("why");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <Background>
@@ -15,21 +21,27 @@ const Banner = () => {
                 <h1 className="lg:text-6xl text-4xl font-bold mb-4 drop-shadow-xl">
                   Desain Ruang Nyaman Versi Kamu!
                 </h1>
-                <p className="text-lg">
-                  Studior Team siap menjadi partner terbaik untuk wujudkan
-                  desain ruang impianmu
+                <p className="lg:text-lg text-sm">
+                  Studior Team siap menjadi partner terbaik untuk <br />{" "}
+                  wujudkan desain ruang impianmu
                 </p>
-                <Link href="#why" scroll={true}>
+                <div className="flex items-center justify-center gap-4">
                   <Button
+                    onClick={scrollToSection}
                     variant="ghost"
                     className="font-bold tracking-widest bg-[#124980] mt-8 px-6 py-3">
-                    Let{"'"}s Dive In!
+                    Kenapa Studior?
                   </Button>
-                </Link>
+                  <Button
+                    variant="outline"
+                    className="font-bold tracking-widest mt-8 px-6 py-3 bg-transparent">
+                    Tentang Kami
+                  </Button>
+                </div>
               </div>
-              <div className="flex justify-center items-center row-span-5 md:pt-0 pt-12">
+              {/* <div className="flex justify-center items-center row-span-5 md:pt-0 pt-12">
                 Carousel Content
-              </div>
+            </div> */}
               {/* <div className="flex justify-center items-center w-full md:col-span-2">
               tes
             </div> */}

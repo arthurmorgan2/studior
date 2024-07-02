@@ -24,7 +24,7 @@ export default function Home() {
       <section className="banner">
         <Banner />
       </section>
-      <section className="why w-full">
+      <section id="why" className="w-full">
         <MaxWidthWrapper>
           <div className="flex flex-col pt-8 md:gap-8 gap-4">
             <h1 className="md:text-4xl text-2xl font-bold text-center text-gray-700">
@@ -99,7 +99,7 @@ export default function Home() {
       <section className="process w-full">
         <ProcessSection />
       </section>
-      <section className="w-full flex bg-slate-100">
+      <section id="portofolio" className="w-full flex bg-slate-100">
         <MaxWidthWrapper>
           <div className="grid lg:grid-cols-5 sm:grid-cols-2 lg:py-12 py-4 lg:gap-0 gap-4">
             <div className="flex col-span-2  items-center justify-start">
@@ -145,7 +145,7 @@ export default function Home() {
           <TestimoniSection />
         </MaxWidthWrapper>
       </section>
-      <section className="w-full flex">
+      <section id="faq" className="w-full flex">
         <MaxWidthWrapper>
           <div className="grid lg:grid-cols-5">
             <div className="col-span-2 flex flex-col lg:gap-4 gap-1.5 lg:py-12 pt-4">
@@ -153,14 +153,14 @@ export default function Home() {
                 Frequently Asked Questions
               </h1>
               <p className="md:text-base text-xs text-muted-foreground leading-relaxed">
-                Find answers to common questions about our interior design
-                services and how we work.
+                Temukan jawaban atas pertanyaan umum tentang layanan desain
+                interior kami dan cara kami bekerja
               </p>
-              <Link href="#">
+              <Link href="/contact-us">
                 <Button
                   variant="ghost"
                   className="font-bold tracking-widest bg-[#124980] text-white">
-                  Contact
+                  Kontak Kami
                 </Button>
               </Link>
             </div>
